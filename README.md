@@ -11,6 +11,7 @@ Professor: Samuel Martins
 
 - COMANDO para SUBIR o serviço:
   ```
+  npm install
   npm start
 - COMANDO para recarregar de forma automática os produtos no banco de dados sqlite:
   ```
