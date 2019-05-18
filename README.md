@@ -21,10 +21,10 @@ Professor: Samuel Martins
   Nesta página principal é possível:
   - criar um novo produto no banco de dados sqlite, clicando no botão "Adicionar novo produto":
       - Uma nova página é aberta, onde o usuário pode digitar as informações do produto (Nome, descrição e preço), para em seguida clicar num botão para adicionar o produto. Após a inserção, a url é redirecionada para a página inicial que lista todos os produtos.
-  - deletar do banco de dados sqlite o produto desejado, clicando no botão "Remover" do produto;
+  - deletar do banco de dados sqlite o produto desejado junto com seus comentários do banco mongoDB, clicando no botão "Remover" do produto;
   - visualizar as informações e comentários do produto desejado, clicando no botão "Visualizar" do produto:
      - Uma nova página é aberta, mostrando as informações do produto e uma lista de comentários sobre o produto (armazenada via banco de dados mongoDB). 
-     - O usuário pode deletar o produto visualizado.
+     - O usuário pode deletar o produto visualizado (remove também todos os comentários relativos ao produto).
      - O usuário pode adicionar um novo comentário, informando o autor e o comentário, após a inserção o comentário já é adicionado a página.
      - O usuário pode deletar o comentário desejado.
      - O usuário pode voltar para a página principal que contém a lista de produtos.
