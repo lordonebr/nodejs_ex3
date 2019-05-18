@@ -1,0 +1,44 @@
+<h1>Detalhes do produto de id = {{id}}</h1>
+
+<p>Nome: {{name}}</p>
+<p>Descrição: {{description}}</p>
+<p>Preço: $ {{price}}</p>
+
+<form action="/product/edit/{{id}}" method="POST">
+    <button type="submit">Editar</button>
+</form>
+<form action="/product/delete/{{this.id}}" method="POST">
+    <button type="submit">Remover</button>
+</form>
+<br>
+
+<hr />
+<h2>Comentários sobre o produto</h2>
+{{#each comment}}
+<dl style="background-color :lightgray">
+    <dt><b>Autor</b></dt>
+    <dd>{{this.author}}</dd>
+    <br>
+    <dt><b>Comentário</b></dt>
+    <dd>{{this.comment}}</dd>
+    <br>
+    <form action="/product/comment/delete/{{this._id}}" method="POST">
+        <input type="hidden" name="idProduct" value={{this.idProduct}} />
+        <button type="submit">Deletar</button>
+    </form>
+</dl>
+{{/each}}
+
+<hr />
+
+<h3>Criar novo comentário:</h3>
+<form action="/product/comment/new/{{id}}" method="POST">
+    Autor: <input type="text" name="author" /><br><br>
+    Comentário: <input type="text" name="comment"  /><br><br>
+    <button type="submit">Adicionar</button>
+</form>
+
+<hr />
+<form action="/" method="GET">
+    <button type="submit">Voltar</button>
+</form>

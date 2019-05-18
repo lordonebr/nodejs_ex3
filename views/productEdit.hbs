@@ -1,0 +1,13 @@
+<h1>Edição do produto de id = {{id}}</h1>
+
+<form action="/product/update/{{id}}" method="POST">
+    <input type="hidden" name="id" value={{id}} /><br><br>
+    Nome: <input type="text" name="name" value="{{name}}" /><br><br>
+    Descrição: <input type="text" name="description" value="{{description}}"  /><br><br>
+    Preço: $ <input type="text" name="price" value="{{price}}"  /><br><br>
+    <button type="submit">Atualizar</button>
+</form>
+<br>
+<form action="/product/{{id}}" method="GET">
+    <button type="submit">Cancelar</button>
+</form>

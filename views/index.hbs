@@ -1,0 +1,22 @@
+<h1>Store</h1>
+<p>Welcome to our product store</p>
+
+<form action="/product/add" method="POST">
+    <button type="submit">Adicionar novo produto</button>
+</form>
+<hr />
+<ul>
+    {{#each products}}
+        <li>
+            <p><b>{{this.name}}</b>: {{this.description}}</p>
+            <p><b>Price</b>: ${{this.price}}</p>
+
+            <form action="/product/{{this.id}}" method="GET">
+                <button type="submit">Visualizar</button>
+            </form>
+            <form action="/product/delete/{{this.id}}" method="POST">
+                <button type="submit">Remover</button>
+            </form>
+        </li>
+    {{/each}}
+</ul>
